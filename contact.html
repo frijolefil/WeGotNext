@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — We Got Next</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-contact">
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="https://img.transistorcdn.com/oWC0RIOPFLqCGuV4BRQmdQIhmvgP7Man-flXem962BA/rs:fill:0:0:1/w:1400/h:1400/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZmJj/OGI1NWNkZjE4MTEw/NzczOTUzYzE3YjE1/yA5MS5wbmc.jpg" alt="We Got Next" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a href="subscribe.html" class="nav-cta">Subscribe</a>
+      <button class="nav-hamburger" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="about.html">About</a>
+      <a href="subscribe.html">Subscribe</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section class="contact-hero">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <p class="eyebrow">Get In Touch</p>
+        <h1><em>Let's Talk<br>Women's Sports</em></h1>
+        <p>Have a tip, a story idea, or just want to say hi? We'd love to hear from you.</p>
+        <div class="contact-methods">
+          <a href="mailto:info@wegotnextpod.org" class="contact-method">
+            <span class="contact-icon">✉</span>
+            <div>
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">info@wegotnextpod.org</div>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/podwegotnext/" target="_blank" class="contact-method">
+            <span class="contact-icon">◎</span>
+            <div>
+              <div class="contact-method-label">Instagram</div>
+              <div class="contact-method-value">@podwegotnext</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" onsubmit="handleContact(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General Hello</option>
+              <option value="tip">Story Tip</option>
+              <option value="collab">Collaboration</option>
+              <option value="feedback">Feedback</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send It →</button>
+          <div class="form-success" id="form-success" style="display:none;">
+            Message sent! We'll get back to you soon. 🙌
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="https://img.transistorcdn.com/oWC0RIOPFLqCGuV4BRQmdQIhmvgP7Man-flXem962BA/rs:fill:0:0:1/w:1400/h:1400/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZmJj/OGI1NWNkZjE4MTEw/NzczOTUzYzE3YjE1/yA5MS5wbmc.jpg" alt="We Got Next" />
+        <p>Women's sports from the fan experience.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="about.html">About</a>
+        <a href="subscribe.html">Subscribe</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/podwegotnext/" target="_blank">Instagram</a>
+        <a href="mailto:info@wegotnextpod.org">Email Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Michelle Hatfield & Filiberto Nolasco Gomez · We Got Next</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
